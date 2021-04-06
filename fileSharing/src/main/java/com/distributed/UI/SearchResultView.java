@@ -5,25 +5,34 @@ import javafx.beans.property.SimpleIntegerProperty;
 
 
 public class SearchResultView {
-	private SimpleIntegerProperty id;
+	private SimpleIntegerProperty DownloadID;
 	private SimpleStringProperty address;
 	private SimpleStringProperty filename;
-	private  SimpleIntegerProperty nodeID;
+	private  SimpleIntegerProperty portNo;
 	private SimpleStringProperty time;
+	private SimpleIntegerProperty hops;
 	public SearchResultView(int id,  String filename,String address,
-			int nodeID, String time) {
+			int nodeID,int hops, String time) {
 		
-		this.id = new SimpleIntegerProperty(id);
+		this.DownloadID = new SimpleIntegerProperty(id);
 		this.filename = new SimpleStringProperty(filename);
 		this.address = new SimpleStringProperty(address);
-		this.nodeID =new SimpleIntegerProperty( nodeID);
+		this.portNo =new SimpleIntegerProperty( nodeID);
 		this.time = new SimpleStringProperty(time);
+		this.hops=new SimpleIntegerProperty(hops);
+		
 	}
-	public int getId() {
-		return id.get();
+	public int getHops() {
+		return hops.get();
 	}
-	public void setId(int id) {
-		this.id.set(id);
+	public void setHops(int hops) {
+		this.hops.set(hops); 
+	}
+	public int getDownloadID() {
+		return DownloadID.get();
+	}
+	public void setDownloadID(int id) {
+		this.DownloadID.set(id);
 	}
 	public String getAddress() {
 		return address.get();
@@ -37,11 +46,11 @@ public class SearchResultView {
 	public void setFilename(String filename) {
 		this.filename.set(filename);
 	}
-	public int getNodeID() {
-		return nodeID.get();
+	public int getPortNo() {
+		return portNo.get();
 	}
-	public void setNodeID(int nodeID) {
-		this.nodeID.set(nodeID);
+	public void setPortNo(int nodeID) {
+		this.portNo.set(nodeID);
 	}
 	public String getTime() {
 		return time.get();

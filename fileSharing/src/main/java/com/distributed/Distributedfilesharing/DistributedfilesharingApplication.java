@@ -8,7 +8,7 @@ import com.distributed.core.Node;
 
 
 public class DistributedfilesharingApplication {
-
+/*
 	public static void main(String[] args) {
         try {
             String uniqueID = UUID.randomUUID().toString();
@@ -79,5 +79,7 @@ public class DistributedfilesharingApplication {
             e.printStackTrace();
         }
 
+ 
     }
+    */
 }

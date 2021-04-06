@@ -55,14 +55,14 @@ public class FileManager {
         String[] querySplit = query.split(" ");
 
         Set<String> result = new HashSet<String>();
-        
+        /*
         for (String key: this.files.keySet()){
         	if (key.toLowerCase().equals(query.toLowerCase())){
                 result.add(key);
             }
-        }
+        }*/
 
-        /*for (String q: querySplit){
+        for (String q: querySplit){
             for (String key: this.files.keySet()){
                 String[] fileNameSplit = key.split(" ");
                 for (String f : fileNameSplit){
@@ -71,7 +71,7 @@ public class FileManager {
                     }
                 }
             }
-        }*/
+        }
 
         return result;
     }
